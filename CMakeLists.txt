@@ -73,6 +73,7 @@ target_include_directories(low_pass_filter PUBLIC
     $<INSTALL_INTERFACE:include/control_toolbox>
 )
 target_link_libraries(low_pass_filter PUBLIC low_pass_filter_parameters)
+set_target_properties(low_pass_filter PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 ament_target_dependencies(low_pass_filter PUBLIC ${CONTROL_FILTERS_INCLUDE_DEPENDS})
 
 # Install pluginlib xml
